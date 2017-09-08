@@ -1,0 +1,40 @@
+<!--index.wxml-->
+
+
+<!-- <view class="section tc">
+  <video id="myVideo" objectFit='fill'  src="http://fjstest.oss-cn-hangzhou.aliyuncs.com/fjs.mp4"  controls poster="../../image/login-hd-bg.png"></video>
+  
+</view> -->
+<view class="list-item">
+<view class="madia-area">
+    <view bindtap="videoPlay" wx:if="{{!(playingId == 1)}}" data-imgid="{{id}}">
+        <image class="play-icon" src="../../image/play.png" />
+        <image wx:if="{{!(playingId == 1)}}" class="media" src="../../image/login-hd-bg.png" ></image> 
+    </view>
+    <video wx:if="{{playingId == 1}}" id="myVideo"  event-model="bubble" objectFit='fill' controls src="http://fjstest.oss-cn-hangzhou.aliyuncs.com/fjs.mp4" autoplay="1"   ></video>
+</view>
+</view>
+<view class='title'>
+  
+</view>
+<view class='textarea'><text>房金所（www.fangjinsuo.com）是专注于房产领域的互联网房产金融服务商，金融机构的贷款产品提供商，银行机构金融外包服务商，致力于通过线上线下结合的方式，解决房地产金融领域的信息不对称难题。
+    </text>
+</view>
+<view class='title' >
+  我们的使命
+</view>
+<view class='textarea'><text>房金所—让不动产动起来！不动产的“动”包括：一方面是以买卖为途径，以所有权的转移而产生的动；另一方面是所有权不变，将不动产赋予金融属性，通过融资功能实现不动产的动。本公司的使命为后者。
+  </text>
+</view>
+<view class='title' >
+  公司愿景
+</view>
+<view class='textarea'>
+  <text>互联网、房地产、金融整合联动，成长为国内大型、专业、透明的房地产金融服务平台。</text>
+</view>
+<view class='title' >
+  价值观
+</view>
+<view class='textarea'>
+  <text>以金融为核心，以互联网为主要实现途径，以房地产为主攻领域；挖掘房地产的金融属性，进而实现房地产金融的标准化、普惠化。</text>
+</view>

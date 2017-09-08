@@ -1,0 +1,78 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+#myVideo{
+  width: 100%;
+  height: 280px;
+}
+.textarea{
+  font-size:30rpx;
+  margin:10rpx 20rpx 10rpx 20rpx;
+  line-height:50rpx;
+  color:#888;
+
+}
+.title{
+  text-align:center;
+  font-weight:bold;
+  margin-top: 10rpx;
+}
+
+
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.media {
+  width: 100%;
+}
+
+.hot-desc {
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin: 15px 0;
+}
+
+.madia-area {
+  width: 100%;
+  position: relative;
+}
+
+video {
+  width: 100%;
+}
+
+.play-icon {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+}

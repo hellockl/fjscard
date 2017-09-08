@@ -1,0 +1,87 @@
+<!--page/component/index.wxml-->
+<view class='nocard' wx:if="{{isshow==2}}">
+  
+  <view class="nocard_text">
+    你还没有名片哦，赶紧来做一张吧
+  </view>
+  <button type="default" bindtap="navToCreatecard" class="btn"> 创建名片 </button>
+  <view class='contact' style='margin-top:100rpx;'> 
+      <view class='contactme'>
+        <contact-button type="default-light" size="26" session-from="weapp"></contact-button>
+      </view>
+      <view class='pig'>房金猪</view>
+  </view>
+  
+</view>
+<view class="container" wx:elif="{{isshow==1}}">
+  
+
+    <view class="about-page">
+        <view class="tag-tag" >
+            <view class="section-1">
+                <view class="avatar">
+                    <image src="{{cardData.avatarUrl}}"></image>
+                </view>
+                <view class="detail">
+                  <view class="name flex1">
+                      <text>{{cardData.name}}</text>
+                  </view>
+                  <view class="comp flex1">
+                     职 位：<text> {{cardData.position}}</text>
+                  </view>
+                  
+                </view>
+            </view>
+            <view class="section-2">
+              <view class="section-2-detail">
+                  <view class="comp flex1">
+                        邮 箱：<text>{{cardData.email}}</text>
+                  </view>
+                  <view class="comp flex1">
+                        公 司：<text> {{cardData.company}} </text>
+                  </view>
+                  <view class="comp flex1">
+                        手 机：<text> {{cardData.phoneNum}} </text>
+                  </view>
+                  <view class="comp flex1">
+                        <text>  </text>
+                  </view>
+                  
+                </view>
+              <view class="section-3">
+                  <image src="../../image/basicprofile.png"></image>
+              </view>
+            </view>
+        </view>
+
+        <view class="person-introduction">
+            <view class="person-introduction-title">
+                <text>个人简介</text>
+            </view>
+            <view  class="person-introduction-desc">
+                <text>{{cardData.more}}</text>
+            </view>
+        </view>
+        
+        <view class='contact'>
+          
+            <view class='contactme'>
+              <contact-button type="default-light" size="26" session-from="weapp"></contact-button>
+            </view>
+            
+            <view class='pig'>房金猪</view>
+          
+        </view>
+
+        <view class='editview'>
+           <button type="normal" bindtap="navToEditCard" class="btn_card1"> 编缉名片 </button>
+           <button type="normal" open-type="share" class="btn_card2"> 投递名片 </button>
+        </view>
+        
+        <!-- <button type="default" bindtap="navToCard" class="btn"> 名片 </button> -->
+    </view>
+    
+  
+</view>
+<view class="container" wx:else>
+</view>

@@ -1,0 +1,52 @@
+<!--page/createcard/createcard.wxml-->
+
+<!--pages/createcard/createcard.wxml-->
+<view class="bg-gray2">
+  <form bindsubmit="formSubmit" bindreset="formReset" >
+    <view class="card-form">
+      <view class="card-formitem">
+        <view class="card-user">
+          
+          <view class="sign">
+            <image src="{{cardData.avatarUrl}}"></image>
+          </view>
+          <view class="message">
+            <!-- 
+            <view wx:if="{{cardData.data.mobile!=''}}">
+              <text class="btn-verify" catchtap="toVerifyCode" wx:if="{{cardData.data.mobileVerify}}">更改</text>
+               <text class="btn-verify" catchtap="toVerifyCode" wx:else>验证</text> 
+            </view> 
+            -->
+            <input placeholder="姓名" class="card-input" placeholder-class="gray3" maxlength="18" name="name" value="{{cardData.name}}" bindinput="cardDataName" />
+            <input placeholder="请输入手机号" class="card-input" placeholder-class="gray3" maxlength="20" type="number" name="mobile" value="{{cardData.mobile}}" bindinput="cardDataMobile" disabled="{{cardData.mobileVerify}}" />
+          </view>
+        </view>
+      </view>
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label">公司：</view>
+          <input placeholder="请输入公司名称" class="card-input" placeholder-class="gray3" maxlength="20" name="companyName" value="{{cardData.companyName}}" bindinput="cardDataCompanyName" />
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">职务：</view>
+          <input placeholder="请填写职务名称" class="card-input" placeholder-class="gray3" maxlength="20" name="position" value="{{cardData.position}}" bindinput="cardDataPosition" />
+        </view>
+        <view class="card-inputlabel">
+          <view class="label">邮箱：</view>
+          <input placeholder="请填写邮箱地址" class="card-input" placeholder-class="gray3" maxlength="30" name="email" value="{{cardData.email}}" bindinput="cardDataEmail"/>
+        </view>
+      </view>
+      <view class="card-formitem">
+        <view class="card-inputlabel">
+          <view class="label">简介：</view>
+          <textarea  placeholder="" name="more" value="{{cardData.more}}" bindinput="cardDataMore"/>
+        </view>
+      </view>
+      
+      <view class="">
+        <button formType="submit" class="btn">创建</button>
+      </view>
+    </view>
+  </form>
+  
+</view>
