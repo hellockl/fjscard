@@ -108,7 +108,7 @@
 
 .detail .comp{
   /*background-color: #f00*/
-   font-size: 24rpx;
+   font-size: 29rpx;
    color:#aaa;
 }
 
@@ -130,7 +130,7 @@
 
 .section-2-detail .comp{
   line-height: 20rpx;
-  font-size: 22rpx;
+  font-size: 30rpx;
 }
 page{
     /* background-color: #03a5ef; */
@@ -191,4 +191,12 @@ page{
   float: right;
   margin-right: 10%;
   border-color: #1AAD19;
+}
+
+button[type="primary"][plain] {
+  color:#03a5ef;
+  border:1px solid #03a5ef;
+  width: 90pt;
+  background-color:transparent;
+
 }

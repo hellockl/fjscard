@@ -46,13 +46,21 @@
               <text>{{cardData.more}}</text>
           </view>
       </view>
-
+      
       <view class='contact'>         
             <view class='contactme'>
               <contact-button type="default-light" size="26" session-from="weapp"></contact-button>
             </view> 
             <view class='pig'>房金猪</view>
       </view>
+
+      <view class='tel' bindtap="makephonecall"  >
+          <image src='../../image/icon-tel.png'></image>
+      </view>
+      
+        
+      
+      
 
   </view>
   <view class="fixed-btn">

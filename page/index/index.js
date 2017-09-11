@@ -14,6 +14,18 @@ Page({
   },
   inputValue: '',
   data: {
+    slider: [
+      {
+        id: 11160,
+        linkUrl: "http://y.qq.com/w/taoge.html?id=0",
+        picUrl: "http://img.fangjinsuo.com/banner/2016/0429/banner_1461875185_3212.jpg"
+      },
+      {
+        id: 11160,
+        linkUrl: "http://y.qq.com/w/taoge.html?id=0",
+        picUrl: "http://img.fangjinsuo.com/banner/2016/0429/banner_1461875124_8671.png"
+      }
+    ],
     playingId: 0,
     id: 1,
     src: '',
@@ -49,6 +61,12 @@ Page({
     this.videoContext.sendDanmu({
       text: this.inputValue,
       color: getRandomColor()
+    })
+  },
+  makephonecall: function () {
+    
+    wx.makePhoneCall({
+      phoneNumber: '4008102999'
     })
   },
   videoPlay(e) {

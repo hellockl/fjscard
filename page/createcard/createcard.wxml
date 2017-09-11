@@ -18,7 +18,7 @@
             </view> 
             -->
             <input placeholder="姓名" class="card-input" placeholder-class="gray3" maxlength="18" name="name" value="{{cardData.name}}" bindinput="cardDataName" />
-            <input placeholder="请输入手机号" class="card-input" placeholder-class="gray3" maxlength="20" type="number" name="mobile" value="{{cardData.mobile}}" bindinput="cardDataMobile" disabled="{{cardData.mobileVerify}}" />
+            <input placeholder="请输入手机号" class="card-input" placeholder-class="gray3" maxlength="11" type="number" name="mobile" value="{{cardData.mobile}}" bindinput="cardDataMobile" disabled="{{cardData.mobileVerify}}" />
           </view>
         </view>
       </view>

@@ -57,11 +57,11 @@ App({
   },
   getOpenid: function (val, callback)  {
     var openid = wx.getStorageSync('openid');
-    console.log(openid);
+    
     if (openid) {
       callback(openid)
     } else {
-      console.log('bbb');
+      
       wx.login({
         success: function (res) {
           if (res.code) {

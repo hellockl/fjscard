@@ -69,13 +69,16 @@
               <contact-button type="default-light" size="26" session-from="weapp"></contact-button>
             </view>
             
-            <view class='pig'>房金猪</view>
+            <view class='pig' style="margin-right:1px">房金猪</view>
           
         </view>
 
         <view class='editview'>
-           <button type="normal" bindtap="navToEditCard" class="btn_card1"> 编缉名片 </button>
-           <button type="normal" open-type="share" class="btn_card2"> 投递名片 </button>
+           <button type="primary" class="btn_card1" bindtap="navToEditCard" plain="true">编缉名片</button>
+           <button type="primary" class="btn_card2" open-type="share" plain="true">投递名片</button>
+           <!-- <button type="primary" class="btn_card2" bindtap="navToCard" plain="true">投递名片</button> -->
+           <!-- <button type="normal"  class="btn_card1"> 编缉名片 </button>
+           <button type="normal"  class="btn_card2"> 投递名片 </button> -->
         </view>
         
         <!-- <button type="default" bindtap="navToCard" class="btn"> 名片 </button> -->

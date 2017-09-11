@@ -34,10 +34,10 @@ Page({
           a: '123456'
         })
         d = '123';  
-        console.log(that.data.a);     
+         
       }
     })
-    console.log(d);
+    
   },
   /**
    * 创建名片
@@ -49,7 +49,7 @@ Page({
   },
   navToCard: function () {
     wx.navigateTo({
-      url: '../card/card?id=12'
+      url: '../card/card?id=6'
     })
   },
   navToEditCard:function(){
@@ -88,10 +88,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('onshow');
+   
     var that = this
     var cardDataInfo = wx.getStorageSync('cardDataInfo');
-    console.log(cardDataInfo);
+    
     if (cardDataInfo) {
 
       that.setData({
@@ -111,7 +111,7 @@ Page({
             'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
           },
           success: function (result) {
-            console.log('success');
+            
             if (result.data.status == 0) {
 
               wx.setStorageSync('cardDataInfo', result.data.data);
@@ -160,11 +160,12 @@ Page({
    */
   onShareAppMessage: function () {
     let cardDataInfo = wx.getStorageSync('cardDataInfo');
+    console.log(cardDataInfo);
     if(cardDataInfo){
       console.log(cardDataInfo.id);
       return {
         title: '您好，这是我的名片，请惠存',
-        path: '/page/card?id=' + cardDataInfo.id,
+        path: '/page/card/card?id=' + cardDataInfo.id,
         success: function (res) {
           // 转发成功
         },

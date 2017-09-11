@@ -141,7 +141,24 @@ Page({
       }
     }
     app.postData(data, function (res) {
-      wx.setStorageSync('cardDataInfo', data.data);
+      wx.request({
+        url: 'https://www.fangjinsuo.com/miniappapi/getcardinfobyopenid',
+        method: 'POST',
+        data: {
+          openid: wx.getStorageSync('openid')
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        success: function (result) {
+
+          if (result.data.status == 0) {
+            wx.setStorageSync('cardDataInfo', result.data.data);
+          } 
+
+        }
+      })
+      
       wx.showToast({
         title: '成功',
         icon: 'success',

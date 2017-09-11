@@ -16,6 +16,7 @@ Page({
   onLoad: function (options) {
     let that = this;
     var id = options.id;
+    
     var data = {
       'url': '/miniappapi/getCardInfo',
       'data': {
@@ -23,10 +24,10 @@ Page({
       }
     }
     app.postData(data, function (res) {
-      if(res.status==0){
+      if (res.status == 0) {
         wx.setStorageSync('hisCard', res.data);
         that.setData({
-          cardData:res.data
+          cardData: res.data
         })
       }
     })
@@ -36,7 +37,16 @@ Page({
     let hisCardInfo = wx.getStorageSync('hisCard');
     wx.addPhoneContact({
       firstName: hisCardInfo.name,
-      mobilePhoneNumber:hisCardInfo.phoneNum
+      mobilePhoneNumber:hisCardInfo.phoneNum,
+      organization:hisCardInfo.company,
+      success:function(res){
+        wx.showToast({
+          title: '创建成功',
+          icon: 'success',
+          duration: 2000,
+          
+        });
+      }
     })
   },
   navToIndex:function(options){
@@ -49,19 +59,26 @@ Page({
       url: '../component/index'
     })
   },
+  makephonecall: function () {
+    var info = wx.getStorageSync('hisCard');
+    wx.makePhoneCall({
+      phoneNumber: info.phoneNum
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function (options) {
+    
+    
   },
 
   /**
